@@ -30,9 +30,13 @@ public class Dice {
 				System.out.println("\nRoll "+counter);
 				//rolls die 1 using Math.random, +1 accounts for 'lost side'
 				die1 = (int)(Math.random()*sides)+1;
-				System.out.println("Die 1: "+die1);
 				//rolls die 2 using Random.nextInt, +1 accounts for 'lost side'
 				die2 = rnd.nextInt(sides)+1;
+				if(die1==1&&die2==1)
+					System.out.println("Snake Eyes!");
+				if(die1==6&&die2==6)
+					System.out.println("Box Cars!");
+				System.out.println("Die 1: "+die1);
 				System.out.println("Die 2: "+die2);
 			}else
 				cont=false;
